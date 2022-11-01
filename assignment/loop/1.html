@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let input = parseFloat(prompt("정수를 입력하세요"));
+      // cf. parseInt() => 실수도 정수로 만들어줌
+      function printStart() {
+        if (isNaN(input) || input <= 0 || !Number.isInteger(input)) {
+          // (input % 1 !== 0 ) 실수 제거 적용!
+          document.write("입력 오류입니다.");
+        } else {
+          for (let i = 1; i <= input; i++) {
+            for (let j = 0; j < i; j++) {
+              document.write("*");
+            }
+            document.write("</br>");
+          }
+        }
+      }
+
+      printStart();
+    </script>
+  </body>
+</html>

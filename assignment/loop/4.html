@@ -7,13 +7,16 @@
     <title>Document</title>
   </head>
   <body>
+    <h1>암호를 입력하라!</h1>
+    <hr />
     <script>
-      for (let size = 10; size <= 35; size += 5) {
-        document.write("<span ");
-        document.write("style='font-size:" + size + "px'>");
-        document.write(size + "px");
-        document.write("</span>");
-      }
+      do {
+        let input = prompt("암호를 대라");
+        if (input === "you") {
+          break;
+        }
+      } while (true);
+      document.write("통과!");
     </script>
   </body>
 </html>

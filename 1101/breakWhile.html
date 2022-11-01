@@ -8,12 +8,18 @@
   </head>
   <body>
     <script>
-      for (let size = 10; size <= 35; size += 5) {
-        document.write("<span ");
-        document.write("style='font-size:" + size + "px'>");
-        document.write(size + "px");
-        document.write("</span>");
+      let sum = 0;
+      let num = 1;
+
+      while (true) {
+        sum += num;
+
+        if (sum > 3000) {
+          break;
+        }
+        num++;
       }
+      document.write(`${num}까지 더하면 3000을 넘음 / 합계 : ${sum}`);
     </script>
   </body>
 </html>

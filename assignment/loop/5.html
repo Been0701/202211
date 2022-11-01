@@ -8,12 +8,10 @@
   </head>
   <body>
     <script>
-      for (let size = 10; size <= 35; size += 5) {
-        document.write("<span ");
-        document.write("style='font-size:" + size + "px'>");
-        document.write(size + "px");
-        document.write("</span>");
-      }
+      let input = prompt("수식 입력");
+      let result = eval(input);
+
+      document.write(`${input} = ${result}`);
     </script>
   </body>
 </html>

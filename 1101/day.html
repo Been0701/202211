@@ -16,7 +16,7 @@
   <body>
     <script>
       let day = prompt("요일을 입력하세요");
-      let enDay;
+      let enDay; // 블록 스코프. 블록 밖에 선언해뒀기 때문에 블록 안에서의 값이 여기에 저장이 되고, 블록 아래에서도 쓸 수 있음!
 
       switch (day) {
         case "월":
