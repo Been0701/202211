@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let fruit = prompt("무슨 과일을 구매하시겠습니까?");
+      let price;
+
+      switch (fruit) {
+        case "바나나":
+          price = 200;
+          break;
+        case "사과":
+          price = 300;
+          break;
+        case "체리":
+          price = 400;
+          break;
+        default:
+          document.write(fruit + "은(는) 팔지 않습니다.");
+          price = 0;
+      }
+
+      document.write(fruit + "은(는) " + price + "원입니다.");
+    </script>
+  </body>
+</html>
