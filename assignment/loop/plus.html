@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>1-100까지 숫자 중 3 or 4의 배수가 아닌 숫자의 합을 구하라</h1>
+    <hr />
+    <script>
+      let sum = 0;
+      // 1~100까지 반복
+      for (let i = 1; i <= 100; i++) {
+        // 3의 배수 또는 4의 배수인 경우 계산 안 함
+        if (i % 3 == 0 || i % 4 == 0) {
+          continue;
+        }
+        sum += i;
+      }
+      document.write("합 : " + sum);
+    </script>
+  </body>
+</html>

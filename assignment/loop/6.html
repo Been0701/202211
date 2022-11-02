@@ -9,7 +9,8 @@
   <body>
     <script>
       let num = parseInt(prompt("정수를 입력하세요"));
-      let answer = num % 2 === 0 ? "짝수" : "홀수";
+      // let answer = num % 2 === 0 ? "짝수" : "홀수";
+      let answer = num % 2 ? "홀수" : "짝수"; // true 1 false 0
 
       document.write(`입력한 값 : ${num} <br/>`);
       document.write(`${answer}`);

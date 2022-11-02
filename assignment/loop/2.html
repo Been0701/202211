@@ -11,22 +11,15 @@
     <hr />
 
     <script>
-      document.write(`
-      <table border = "1">
-        <tr>
-          <th>n</th>`);
+      document.write(`<table border = "1"><tr><th>n</th>`);
       for (let i = 0; i < 10; i++) {
         document.write(`<td>${i}</td>`);
       }
-      document.write(`</tr>
-          <tr>
-          <th>n<sup>2</sup></th>`);
+      document.write(`</tr><tr><th>n<sup>2</sup></th>`);
       for (let i = 0; i < 10; i++) {
         document.write(`<td>${i ** 2}</td>`);
       }
-      document.write(`
-        </tr>
-      </table>`);
+      document.write(`</tr></table>`);
     </script>
   </body>
 </html>

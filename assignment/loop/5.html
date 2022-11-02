@@ -10,8 +10,12 @@
     <script>
       let input = prompt("수식 입력");
       let result = eval(input);
-
-      document.write(`${input} = ${result}`);
+      if (input == "") {
+        // null 해보니 안 됨. 빈 문자열로 인식 O
+        document.write("입력된 식이 없습니다.");
+      } else {
+        document.write(`${input} = ${result}`);
+      }
     </script>
   </body>
 </html>
