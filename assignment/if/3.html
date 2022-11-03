@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: auto;
+        width: 80vw;
+      }
+      .input {
+        background-color: pink;
+        margin: 20px;
+      }
+      .result {
+        margin: 20px;
+        padding: 15px;
+        text-align: center;
+        font-weight: bold;
+      }
+      h1 {
+        text-align: center;
+      }
+      .avg {
+        background-color: green;
+      }
+      .less {
+        background-color: skyblue;
+      }
+      .over {
+        background-color: red;
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>표준체중 계산기</h1>
+    <script>
+      let height = parseInt(prompt("키를 입력하세요"));
+      let weight = parseInt(prompt("몸무게를 입력하세요"));
+      let result = "";
+      let standard = (height - 100) * 0.9;
+
+      document.write(`<div class="input"> <p>키 : ${height}</p>`);
+      document.write(`<p>몸무게 : ${weight}</p>`);
+      document.write(`<p>표준체중 : ${standard}<p></div>`);
+      if (weight > standard) {
+        document.write(`<p class ="result over">과체중입니다.</p>`);
+      } else if (weight < standard) {
+        document.write(`<p class ="result less">저체중입니다.</p>`);
+      } else {
+        document.write(`<p class ="result avg">표준입니다.</p>`);
+      }
+    </script>
+  </body>
+</html>

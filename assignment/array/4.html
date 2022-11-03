@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let score = [];
+      let random = 0;
+      let sum = 0;
+
+      for (let i = 0; i < 5; i++) {
+        random = Math.floor(Math.random() * 101);
+        score.push(random);
+        sum += random;
+      }
+      document.write("배열 score 출력 </br>");
+      document.write(score);
+      document.write("<hr>");
+      document.write("score 합계 출력 </br>");
+      document.write(sum);
+      document.write("<hr>");
+      document.write("score 평균 출력 </br>");
+      document.write(sum / score.length);
+    </script>
+  </body>
+</html>
