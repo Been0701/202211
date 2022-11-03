@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let buttons = [
+        "선택삭제",
+        "품절상품 모두삭제",
+        "쇼핑 계속하기",
+        "구매하기",
+      ];
+      let status = ""; // 변수 선언 위치 중요!!
+
+      do {
+        status = prompt("어떻게 하시겠습니까?");
+        switch (status) {
+          case "선택삭제":
+          case "품절상품 모두삭제":
+            document.write("delete");
+            break;
+          case "쇼핑 계속하기":
+            document.write("shop");
+            break;
+          case "구매하기":
+            document.write("buy");
+            break;
+
+          default:
+            alert("다시 입력해주세요.");
+        }
+      } while (!buttons.includes(status));
+    </script>
+  </body>
+</html>

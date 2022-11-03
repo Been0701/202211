@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let tBuy = parseInt(prompt("티셔츠를 몇 개 구매하시겠습니까?"));
+      let sBuy = parseInt(prompt("스웨터를 몇 개 구매하시겠습니까?"));
+      let sum = tBuy * 10000 + sBuy * 30000;
+
+      if (sum <= 100000) {
+        sum *= 0.95;
+      } else {
+        sum *= 0.85;
+      }
+      document.write(`티셔츠 개수 : ${tBuy}<br>
+                        스웨터 개수 : ${sBuy}<br>
+                        합계 : ${sum}원`);
+    </script>
+  </body>
+</html>

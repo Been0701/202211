@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let computer = Math.floor(Math.random() * 100) + 1;
+      console.log(computer);
+      let user = 0;
+      let chance = 5;
+
+      do {
+        user = parseInt(prompt("1~100 사이의 숫자를 입력하세요"));
+        chance--;
+        if (chance > 0) {
+          if (user < computer) {
+            alert(`UP! 남은 기회 : ${chance}`);
+          } else if (user > computer) {
+            alert(`Down! 남은 기회 : ${chance}`);
+          } else {
+            alert("정답입니다!");
+          }
+        } else {
+          alert(`기회를 다 쓰셨습니다!`);
+          break;
+        }
+      } while (user !== computer);
+      document.write(`정답 : ${computer}`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let password = prompt("비밀번호를 입력하세요");
+      let result = "";
+      if (9 <= password.length) {
+        result = "Good";
+      } else if (5 <= password.length) {
+        result = "Normal";
+      } else {
+        result = "Bad";
+      }
+      document.write(`당신의 비밀번호 : ${password}<br>
+      비밀번호의 안정성은 ${result}입니다.`);
+    </script>
+  </body>
+</html>

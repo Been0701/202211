@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let skill = "";
+      let skills = [];
+      for (let i = 0; i < 5; i++) {
+        skill = prompt("보유한 스킬을 최대 5개까지 입력해주세요.");
+        skills.push(skill);
+      }
+      //   let skills = ["HTML", "CSS", "Javascript", "React"];
+      if (skills.includes("Javascript") && skills.includes("React")) {
+        document.write("합격");
+      } else if (skills.includes("Javascript") || skills.includes("React")) {
+        document.write("보류");
+      } else {
+        document.write("탈락");
+      }
+    </script>
+  </body>
+</html>
