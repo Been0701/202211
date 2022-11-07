@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let cat = {
+        name: "희동",
+        age: 2,
+        weight: "8kg",
+        location: "yeonheedong",
+      };
+      console.log(cat.name);
+      console.log(cat["name"]);
+      console.log(Object.keys(cat));
+
+      let 강아지 = {};
+      강아지["다리"] = 4;
+      강아지["이름"] = "밍키";
+      강아지["색깔"] = "회색";
+      console.log(강아지);
+
+      let tiger = {};
+      tiger.name = "tigger";
+      tiger.age = 12;
+      tiger.location = "Backdu";
+      document.write(JSON.stringify(tiger));
+
+      let 가족 = [
+        { 역할: "아빠", 나이: 63, 특징: "성실" },
+        { 역할: "엄마", 나이: 63, 특징: "깔끔" },
+        { 역할: "언니", 나이: 34, 특징: "꼼꼼" },
+        { 역할: "막내", 나이: 30, 특징: "큐트" },
+      ];
+      document.write(JSON.stringify(가족));
+      console.log(가족[3].특징);
+      console.log(가족[1]["나이"]);
+
+      var 민지 = { 이름: "민지", 나이: 11, 행운의숫자: [2, 4, 8, 16] };
+      var 지훈 = { 이름: "지훈", 나이: 15, 행운의숫자: [3, 9, 40] };
+      var 서연 = { 이름: "서연", 나이: 19, 행운의숫자: [1, 2, 30] };
+      var 친구 = [민지, 지훈, 서연];
+      console.log(친구[0].행운의숫자[2]);
+      var 빌려준돈 = {};
+      빌려준돈["지훈"] = 5000;
+      빌려준돈["민지"] = 7000;
+      빌려준돈["지훈"] += 3000;
+      console.log(빌려준돈);
+
+      // 객체 안에 객체 저장
+      var 영화 = {
+        "니모를 찾아서": {
+          개봉연도: 2003,
+          상영시간: 100,
+          출연진: ["앨버트 브룩스", "엘런 드제너러스", "알렉산더 굴드"],
+          형식: "DVD",
+        },
+        "해리포터와 불의 잔": {
+          개봉연도: 2005,
+          상영시간: 157,
+          출연진: ["다니엘 레드클리프", "엠마 왓슨", "루퍼트 그린트"],
+          형식: "블루레이",
+        },
+      };
+
+      var 니모 = 영화["니모를 찾아서"];
+      console.log(니모.상영시간);
+
+      // 객체 안에 객체 추가하기
+      var 카 = {
+        개봉연도: 2006,
+        상영시간: 117,
+        출연진: ["오웬 윌슨", "보니 헌트", "폴 뉴먼"],
+        형식: "블루레이",
+      };
+      영화["카"] = 카; // "카"라는 키에 >카<라는 객체를 저장!
+      console.log(Object.keys(영화));
+    </script>
+  </body>
+</html>

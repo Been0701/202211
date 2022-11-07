@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let width = 100;
+      let height = 200;
+
+      //   let area = {
+      //     width: width,
+      //     height: height,
+      //   };
+
+      // 키와 값의 이름이 동일한 경우 축약 가능!
+      let area = { width, height };
+      console.log(area);
+
+      const dog = {
+        name: "바둑이",
+        legs: 2,
+        color: "brown",
+        speak: function () {
+          console.log("멍멍");
+          console.log(this.name);
+        },
+      };
+      dog.speak();
+    </script>
+  </body>
+</html>
