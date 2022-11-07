@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let score = [];
+      for (let i = 0; i < 5; i++) {
+        score[i] = parseInt(prompt("점수를 입력하세요"));
+      }
+      let min = 101;
+      let max = -1;
+      let sum = 0;
+
+      for (let i = 0; i < score.length; i++) {
+        if (min > score[i]) {
+          min = score[i];
+        }
+        if (score[i] > max) {
+          max = score[i];
+        }
+      }
+      for (let i = 0; i < score.length; i++) {
+        if (score[i] == min || score[i] == max) {
+          continue;
+        } else {
+          sum += score[i];
+        }
+      }
+      // 인덱스를 구해서 제거하는 방법도 가능
+      // let maxIndex = score.indexOf(max);
+      // score.splice(maxIndex,1);
+
+      document.write(`입력한 점수 : ${score}<hr>`);
+      document.write(`최고 점수 :${max}`);
+      document.write(`최저 점수 :${min}<hr>`);
+
+      document.write(`합 :${sum}`);
+      document.write(`평균 :${sum / score.length}<hr>`);
+    </script>
+  </body>
+</html>

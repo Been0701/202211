@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let price = 300;
+      let count = 10;
+      while (0 < count) {
+        let money = parseInt(prompt(`돈을 넣어주세요 (남은 커피 : ${count})`));
+        if (money == price) {
+          count--;
+          alert(`커피를 줍니다. (남은 커피 : ${count})`);
+        } else if (money > price) {
+          count--;
+          let change = money - price;
+          alert(`거스름돈 ${change}원과 커피를 줍니다. (남은 커피 : ${count})`);
+        } else {
+          alert(`돈이 부족합니다.`);
+        }
+      }
+      alert("커피가 다 팔렸습니다~!");
+    </script>
+  </body>
+</html>

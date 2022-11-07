@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let fee = parseInt(prompt("계약 금액을 입력하세요."));
+      let useMonth = parseInt(prompt("사용 개월 수를 입력하세요."));
+      let cardCode = parseInt(prompt("카드 코드를 입력하세요."));
+      let useDc, cardDc;
+
+      if (useMonth <= 6) {
+        useDc = 0;
+      } else if (useMonth <= 12) {
+        useDc = 10;
+      } else {
+        useDc = 20;
+      }
+      switch (cardCode) {
+        case 11:
+          cardDc = 5;
+          break;
+        case 12:
+          cardDc = 8;
+          break;
+        case 13:
+          cardDc = 12;
+          break;
+      }
+
+      let pay = fee - fee * useDc * 0.01 - fee * cardDc * 0.01;
+
+      document.write(`계약 금액 : ${fee}</br>
+                        사용 개월 수 : ${useMonth}</br>
+                        카드 코드 : ${cardCode}</br>
+                        최종 요금 : ${pay}`);
+    </script>
+  </body>
+</html>

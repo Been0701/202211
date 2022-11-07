@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let cutline = 60;
+      let student = [];
+
+      for (let i = 0; i < 5; i++) {
+        student[i] = parseInt(prompt("시험 점수를 입력해주세요."));
+        if (student[i] < cutline) {
+          document.write(`${i + 1}번 학생은 불합격입니다.<br>`);
+        } else {
+          document.write(`${i + 1}번 학생은 합격입니다.<br>`);
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let input = parseInt(prompt("정수를 입력하세요"));
+      let yaksu = [];
+      for (let i = 1; i <= input; i++) {
+        if (input % i == 0) {
+          yaksu.push(i);
+        }
+      }
+      // 배열의 결과값을 변수에 담아서 문자열로 정렬
+      let result = yaksu.join(" ");
+      document.write("입력한 수 : " + input + "</br>");
+      document.write(`${input}의 약수 : ${result}`);
+    </script>
+  </body>
+</html>

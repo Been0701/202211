@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let comRandom = Math.floor(Math.random() * 3) + 1;
+      let userResult = prompt("가위, 바위, 보 중에 하나를 내세요");
+      let comResult, finalResult;
+
+      switch (comRandom) {
+        case 1:
+          comResult = "가위";
+          break;
+        case 2:
+          comResult = "바위";
+          break;
+        case 3:
+          comResult = "보";
+          break;
+      }
+
+      if (comResult == userResult) {
+        finalResult = "컴퓨터와 비겼습니다.";
+      } else if (
+        (comResult == "가위" && userResult == "보") ||
+        (comResult == "바위" && userResult == "가위") ||
+        (comResult == "보" && userResult == "바위")
+      ) {
+        finalResult = "컴퓨터가 이겼습니다.";
+      } else {
+        finalResult = "컴퓨터가 졌습니다.";
+      }
+
+      if (comResult) document.write(`컴퓨터는 ${comResult}를 냈습니다.<br>`);
+      document.write(finalResult);
+    </script>
+  </body>
+</html>

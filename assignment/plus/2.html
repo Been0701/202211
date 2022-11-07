@@ -10,14 +10,21 @@
     <script>
       let skill = "";
       let skills = [];
-      for (let i = 0; i < 5; i++) {
-        skill = prompt("보유한 스킬을 최대 5개까지 입력해주세요.");
-        skills.push(skill);
-      }
-      //   let skills = ["HTML", "CSS", "Javascript", "React"];
-      if (skills.includes("Javascript") && skills.includes("React")) {
+      // for (let i = 0; i < 5; i++) {
+      //   skill = prompt("보유한 스킬을 최대 5개까지 입력해주세요.");
+      //   skills.push(skill);
+      // }
+      do {
+        skill = prompt(
+          "보유한 스킬을 영문으로 입력하고 더 이상 없으면 '끝'을 입력하세요"
+        );
+        skills.push(skill.toLowerCase());
+      } while (skill !== "끝");
+      skills.pop();
+
+      if (skills.includes("javascript") && skills.includes("react")) {
         document.write("합격");
-      } else if (skills.includes("Javascript") || skills.includes("React")) {
+      } else if (skills.includes("javascript") || skills.includes("react")) {
         document.write("보류");
       } else {
         document.write("탈락");
