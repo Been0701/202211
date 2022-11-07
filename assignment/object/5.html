@@ -12,23 +12,24 @@
         this.name = name;
         this.color = color;
         this.price = price;
-        function printInfo() {
+        this.printInfo = () => {
           document.write(
             `이름 : ${this.name}<br> 색깔 : ${this.color}<br> 가격 : ${this.price}<hr>`
           );
-        }
+        };
       }
 
       // function printInfo(fruit) {
       //   document.write(
-      //     `이름 : ${fruit.name}<br> 색깔 : ${animal.color}<br> 가격 : ${animal.price}<hr>`
+      //     `이름 : ${fruit.name}<br> 색깔 : ${fruit.color}<br> 가격 : ${fruit.price}<hr>`
       //   );
       // }
 
       let apple = new Fruit("사과", "red", 1000);
       let orange = new Fruit("오렌지", "orange", 3000);
 
-      // apple.printInfo();
+      apple.printInfo();
+      orange.printInfo();
     </script>
   </body>
 </html>
