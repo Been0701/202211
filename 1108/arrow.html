@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 매개 변수가 없는 경우
+      //   let sum = () => {
+      //     console.log("안녕하세요!");
+      //   };
+      // 중괄호 생략 가능 (코드 1줄일 때)
+      // let sum = () => console.log("안녕!");
+      let sum = () => 10; // (return 생략)
+      console.log(sum());
+
+      // 매개 변수가 1개인 경우
+      //   let person = (age) => {
+      //     console.log(age);
+      //   };
+      // 소괄호 생략 가능 (& 중괄호 생략; 코드 1줄)
+      let person = (age) => console.log(age);
+      person(10);
+
+      // 매개 변수가 2개 이상
+      let people = (age, name) => console.log(age, name);
+      people(10, "임유빈");
+
+      let multi = (num1, num2) => {
+        let result = num1 + num2;
+        return result;
+      };
+      console.log(multi(10, 20));
+    </script>
+  </body>
+</html>

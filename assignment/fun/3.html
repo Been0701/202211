@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 2~9 , 1~9 까지 랜덤 숫자 추출
+      let left = Math.floor(Math.random() * 8) + 2;
+      let right = Math.floor(Math.random() * 9) + 1;
+      let userInput = parseInt(prompt(`${left}*${right} 값은 얼마입니까?`));
+      let answer = left * right;
+      if (userInput == answer) {
+        document.write(`정답! ${left}*${right}=${answer}입니다.`);
+      } else {
+        document.write(`아니오! ${left}*${right}=${answer}입니다.`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function adder(a, b) {
+        let sum;
+        sum = a + b;
+        return sum;
+      }
+
+      // 함수 호출
+      let n = adder(24567, 98374);
+      document.write("24567 + 98374는 " + n + "<br>");
+
+      let m = adder(24, 67);
+      document.write(m + "<br>");
+
+      let res = eval("2*3+4*6");
+      document.write(res + "<br>");
+      let mm = parseInt("32");
+      let nn = parseInt("0x32");
+      nn = parseInt("hello");
+      if (isNaN(nn)) {
+        document.write("hello는 숫자가 아닙니다.<br>");
+      }
+      let input = prompt("구구단 몇 단을 원하세요?");
+      gugudan(input);
+
+      function gugudan(n) {
+        let m = parseInt(n);
+        if (isNaN(m) || m < 1 || m > 9) {
+          alert("잘못 입력하셨습니다.");
+          return;
+        }
+        for (let i = 1; i <= 9; i++) {
+          document.write(`${m} x ${i} = ${m * i}<br>`);
+        }
+      }
+
+      let send = confirm("전송할까요?");
+      if (send) {
+        document.write("확인 버튼을 눌렀습니다.");
+      } else {
+        document.write("취소되었습니다.");
+      }
+    </script>
+  </body>
+</html>

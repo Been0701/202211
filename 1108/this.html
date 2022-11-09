@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function change(obj, size, color){
+            obj.style.fontSize = size;
+            obj.style.color = color;
+        }
+     </script>   
+    <h3>this 활용
+    <hr>
+    <button onclick="change(this,'30px','red')">버튼</button>
+    <button onclick="change(this,'30px','blue')">버튼</button>
+    <div onclick="change(this, '25px','orange')">여기를 클릭하면 크기와 색 변경</div>
+   
+    <div class="plain">...</div>
+    <div class="important">...</div>
+    <div class="plain">...</div>
+
+    <h3>내가 좋아하는 과일
+        <button onclick="change()">누르세요</button>
+        </h3>
+        <hr>
+        저는 빨간 <span>사과</span>를 좋아해서 아침마다 한 개씩 먹고 있어요. 
+        운동할 때는 중간 중간에 <span>바나나</span>를 먹지요. 탄수화물 섭취가 빨라
+        힘이 납니다. 또한 달콤한 향기를 품은 <span>체리</span>와 여름 냄새 물씬
+        나는 <span>자두</span>를 좋아합니다.
+       
+        <p class="soo">Lorem Ipsum Dolor</p>
+        <div>
+            <p class="css">Lorem Ipsum Dolor</p>
+        <p id="javascript">Lorem Ipsum Dolor</p>
+        </div>
+
+        <button onclick="styleChg()">스타일 변경</button>
+        <p id="p"> </p>
+    <script>
+        let divTags =document.getElementsByTagName("div");
+        let n = divTags.length;
+        console.log(n);
+        let plainClasses = document.getElementsByClassName("plain");
+        console.log(plainClasses.length);
+        function styleChg(){
+            let spanArray = document.getElementsByTagName("span");
+            for (let i=0; i<spanArray.length; i++){
+                spanArray[i].style.color = "orange";
+                spanArray[i].style.fontSize = "20px";
+            }
+        }
+        // document.querySelector("div .soo").style.color = "blue";
+        // let plist = document.querySelectorAll(".soo");
+        // plist[0].style.color = "red";
+        // plist[1].style.color = "blue";
+        // plist[2].style.color = "green";
+        
+        let pList = document.querySelectorAll(".soo, #javascript");
+        for(let i=0; i<pList.length; i++){
+            let item = pList[i];
+            item.style.color ="purple";
+            item.style.fontSize = "20px";
+        }
+        
+        let newDIV = document.createElement("div");
+        newDIV.innerHTML = "새로 생성된 DIV 입니다.";
+        newDIV.setAttribute("id", "myDiv");
+        newDIV.style.backgroundColor = "yellow";
+        let p = document.getElementById("p");
+        p.appendChild(newDIV);
+    </script>
+</body>
+</html>

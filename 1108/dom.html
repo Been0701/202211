@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p
+      id="firstP"
+      style="color: blue; background: yellow"
+      onclick="this.style.color='teal'"
+    >
+      이것은 <span id="stc" style="color: red">문장입니다.</span>
+    </p>
+    <input type="button" value="스타일 변경" onclick="change()" />
+
+    <button onclick="this.style.backgroundColor='orange'">멋쟁이 버튼</button>
+    <script>
+      let p = document.getElementById("firstP");
+      console.log(p.innerHTML);
+      p.style.color = "pink";
+      p.style.backgroundColor = "green";
+      stc.style.color = "white";
+      stc.style.fontSize = "30px";
+
+      function change() {
+        let stc = document.getElementById("stc");
+        stc.style.display = "block";
+        stc.style.width = "6em";
+        stc.style.border = "3px dotted magenta";
+        stc.style.margin = "20px";
+        stc.innerHTML = "나의 <img src='ai.jpg'/>로봇입니다.";
+      }
+    </script>
+  </body>
+</html>
