@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Shape {
+        constructor(name, width, height, color) {
+          this.name = name;
+          this.width = width;
+          this.height = height;
+          this.color = color;
+        }
+        getArea() {
+          return this.width * this.height;
+        }
+      }
+
+      class Triangle extends Shape {
+        constructor(name, width, height, color) {
+          super(name, width, height, color);
+        }
+        getArea() {
+          return (this.width * this.height) / 2;
+        }
+      }
+      let tri = new Triangle("삼각형", 100, 200, "yellow");
+      console.log(tri.getArea());
+
+      class Rectangular extends Shape {
+        constructor(name, width, height, color) {
+          super(name, width, height, color);
+        }
+        getArea() {
+          super.getArea();
+        }
+      }
+      let rec = new Rectangular("사각형", 200, 300, "blue");
+      console.log(rec.getArea);
+    </script>
+  </body>
+</html>
