@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Users {
+        constructor() {
+          this.members = [
+            { id: 1, name: "soo", addr: "seoul" },
+            { id: 2, name: "Lee", addr: "busan" },
+            { id: 3, name: "Kim", addr: "seoul" },
+          ];
+        }
+      }
+      let users = new Users();
+      const user1 = users.members.filter(function (user) {
+        return user.id == 1;
+      });
+
+      document.write("< ID가 1인 고객의 정보 ><hr>");
+      document.write(
+        `이름 : ${user1[0].name}<br> 지역 : ${user1[0].addr}<br><br>`
+      );
+
+      const seoulUsers = users.members.filter(function (user) {
+        return user.addr == "seoul";
+      });
+
+      document.write("< 전체 고객 정보 ><hr>");
+      seoulUsers.forEach(function (user) {
+        document.write(
+          `ID : ${user.id} <br> 이름 : ${user.name}<br> 지역 : ${user.addr}<hr>`
+        );
+      });
+    </script>
+  </body>
+</html>

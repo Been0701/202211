@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a, b, rest;
+      [a, b] = [10, 20];
+      console.log(a);
+      console.log(b);
+      [a, b, ...rest] = [10, 20, 30, 40, 50];
+      console.log(rest); // [30,40,50]
+
+      const foo = ["one", "two", "three"];
+      const [red, yellow, green] = foo;
+      console.log(red);
+      console.log(yellow);
+      console.log(green);
+
+      let [x, y, z] = "abc";
+      console.log(x); // a
+      console.log(y); // b
+      console.log(z); // c
+
+      let [firstName, , title] = ["been", 30, "student"];
+      console.log(firstName);
+      console.log(title);
+
+      let user = {};
+      [user.firstName, user.lastName] = "Yubeen Im".split(" ");
+      console.log(user.firstName);
+      console.log(user.lastName);
+
+      // 객체의 경우
+      let shape = {
+        value: "rectangle",
+        width: 100,
+        height: 200,
+      };
+
+      let { value, width, height } = shape;
+      console.log(value);
+      console.log(width);
+      console.log(height);
+    </script>
+  </body>
+</html>

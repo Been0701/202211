@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const fruits = ["apple", "banana", "melon", "kiwi", "melon"];
+      const fav1 = fruits.find(function (fruit) {
+        return fruit === "melon";
+      });
+      console.log(fav1);
+
+      // 조건을 만족하는 첫번째 아이템 인덱스 반환
+      const fIndex = fruits.findIndex((name) => name === "melon");
+      console.log(fIndex);
+
+      // 배열 아이템들의 일부가 조건을 만족하는지
+      const some = fruits.some((name) => name === "kiwi");
+      console.log(some);
+
+      // 배열이 아이템들이 전부 조건을 만족하는지
+      const every = fruits.every((name) => name === "kiwi");
+      console.log(every);
+
+      // 조건에 맞는 아이템들을 새 배열로 생성
+      const nums = [10, 20, 30, 40, 50];
+      const filter = nums.filter(function (num) {
+        return num >= 30;
+      });
+      console.log(filter);
+      const filter1 = fruits.filter((name) => name === "melon");
+      console.log(filter1);
+      const filter2 = fruits.filter((name) => name.length >= 5);
+      console.log(filter2);
+
+      // 배열 내 모든 아이템에 콜백함수를 적용한 결과를 모아 새 배열을 반환
+      const map1 = nums.map(function (item) {
+        return item * 2;
+      });
+      console.log(map1);
+      const map2 = nums.map((item, index) => item * index);
+      console.log(map2);
+    </script>
+  </body>
+</html>

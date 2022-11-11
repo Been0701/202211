@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        name: "soo",
+        age: 20,
+        addr: "seoul",
+      };
+      // for ... in문 : 객체의 모든 프로퍼티를 순회하며 열거
+      // for ... in문의 변수에 person 객체의 key가 할당
+      for (const key in person) {
+        document.write(`${key} : ${person[key]}<br>`);
+      }
+    </script>
+  </body>
+</html>

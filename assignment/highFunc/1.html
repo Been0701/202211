@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let fruits = [
+        { name: "banana", amount: 3, price: 2500 },
+        { name: "apple", amount: 2, price: 2000 },
+        { name: "memlon", amount: 5, price: 4500 },
+      ];
+      const search = fruits.find(function (fruit) {
+        // fruit은 저 한 줄 통째로를 의미
+        if (fruit.name === "banana") {
+          return fruit;
+        }
+      });
+      document.write(`이름 : ${search.name}<br>`);
+      document.write(`수량 : ${search.amount}<br>`);
+      document.write(`가격 : ${search.price}`);
+    </script>
+  </body>
+</html>

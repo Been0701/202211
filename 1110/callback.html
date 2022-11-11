@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const add = (a, b) => a + b;
+      const sub = (a, b) => a - b;
+
+      function calculator(a, b, calc) {
+        let result = calc(a, b);
+        console.log(result);
+        return result;
+      }
+
+      calculator(1, 1, add);
+      calculator(1, 2, sub);
+
+      setTimeout(() => console.log("5초 뒤에 나타납니다."), 5000);
+      setTimeout(function () {
+        console.log("저도 곧 나타났죠?");
+      }, 6000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const map = new Map();
+      const lee = { name: "Lee" };
+      const kim = { name: "Kim" };
+      map.set(lee, "developer");
+      map.set(kim, "designer");
+
+      document.write("Map 객체의 key<br>");
+      for (const item of map) {
+        document.write(`${JSON.stringify(item[0])}<br>`);
+      }
+      document.write("Map 객체의 value<br>");
+      for (const item of map) {
+        document.write(`${JSON.stringify(item[1])}<br>`);
+      }
+    </script>
+  </body>
+</html>
