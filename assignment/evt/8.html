@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="randomQ()">
+    <h3>산수 문제를 풀어 봅시다.</h3>
+    수식을 계산하여 답을 입력하고 채점 버튼을 누르세요
+    <hr />
+    <div>
+      <span class="ques"
+        ><span class="left"></span><span class="code"></span
+        ><span class="right"></span
+      ></span>
+      <input class="input" type="text" />
+    </div>
+    <div>
+      <span class="ques"
+        ><span class="left"></span><span class="code"></span
+        ><span class="right"></span
+      ></span>
+      <input class="input" type="text" />
+    </div>
+
+    <button id="check">채점</button> <span id="correct">맞은갯수</span>
+    <button id="random">다시</button>
+
+    <script>
+      let leftNum = document.getElementsByClassName("left")[0];
+      let rightNum = document.getElementsByClassName("right")[0];
+      let code = document.getElementsByClassName("code")[0];
+      let codes = ["+", "-", "/", "*"];
+      let ques = document.getElementById("ques");
+      let input = document.getElementById("input").value;
+      let result = eval(ques.innerText);
+      let againBtn = document.getElementById("random");
+      let check = document.getElementById("check");
+
+      function randomQ() {
+        leftNum.innerHTML = Math.floor(Math.random() * 99) + 1;
+        rightNum.innerHTML = Math.floor(Math.random() * 99) + 1;
+        code.innerHTML = codes[Math.floor(Math.random() * 4)];
+      }
+      againBtn.addEventListener("click", randomQ);
+
+      console.log(leftNum.innerText);
+      console.log(ques.innerText);
+      console.log(result);
+      //   check.addEventListener("click", function () {
+      //     //사용자가 입력한 값이 계산한 값과 맞는지 확인해서
+
+      //     // 일치하면 정답을 띄워주고
+      //     if ()
+      //     // 틀리면 밑줄을 그어준다
+      //   });
+      eval(ques.innerText);
+    </script>
+  </body>
+</html>

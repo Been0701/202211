@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>옵션 선택으로 사이트 접속</h3>
+    옵션 선택마다 새 윈도우에 접속합니다.
+    <hr />
+    접속할 사이트
+    <form>
+      <select id="sites" onchange="openWindow()">
+        <option value="">사이트명</option>
+        <option value="https://www.naver.com">네이버</option>
+        <option value="https://www.google.com">구글</option>
+      </select>
+    </form>
+
+    <script>
+      function openWindow() {
+        let sites = document.getElementById("sites");
+        let src = sites.options[sites.selectedIndex].value;
+        window.open(src, "left=500,top=400,width=500,height=400");
+      }
+    </script>
+  </body>
+</html>

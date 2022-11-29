@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>innerHTML</h3>
+    <hr />
+    <p id="q" onclick="pChange()">이번 겨울에는 어디로 여행을 떠날까요?</p>
+
+    <script>
+      function pChange() {
+        let answer = prompt("HTML 텍스트 혹은 그냥 텍스트를 입력해주세요!");
+        document.getElementById("q").innerHTML = answer;
+      }
+    </script>
+  </body>
+</html>

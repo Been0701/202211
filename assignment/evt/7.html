@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>계산기 만들기</h3>
+    <hr />
+    수식을 입력하고 &ltEnter&gt를 입력하세요.<br />
+    식 <input id="ques" type="text" /><br />
+    값 <input id="ans" type="text" />
+    <script>
+      let ques = document.getElementById("ques");
+      let ans = document.getElementById("ans");
+
+      ques.addEventListener("keyup", function (e) {
+        if (e.keyCode === 13) {
+          console.log(ques.value);
+          ans.value = eval(ques.value);
+          // 어떨 땐 value고, 어떨 땐 innerHTML일까?
+        }
+      });
+    </script>
+  </body>
+</html>

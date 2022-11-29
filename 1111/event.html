@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="init()">
+    <p
+      id="p"
+      <!--
+      onmouseover="this.style.backgroundColor='orange'"
+      onmouseout="this.style.backgroundColor='bisque'"
+      --
+    >
+      마우스 올리면 색 변경
+    </p>
+    <button onclick="eventFunction(event)">클릭하세요</button>
+
+    <script>
+      let p;
+      function init() {
+        p = document.getElementById("p");
+        // p.onmouseover = over;
+        // p.onmouseout = out;
+        p.addEventListener("mouseover", function () {
+          this.style.backgroundColor = "orange";
+        });
+        p.addEventListener("mouseout", out);
+      }
+      //   function over() {
+      //     p.style.backgroundColor = "orange";
+      //   }
+      function out() {
+        p.style.backgroundColor = "white";
+      }
+
+      document.getElementById("p").onclick = eventFunction;
+
+      function eventFunction(e) {
+        alert(e.type);
+      }
+    </script>
+  </body>
+</html>

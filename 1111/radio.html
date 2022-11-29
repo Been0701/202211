@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="radio" name="city" value="seoul" />서울
+      <input type="radio" name="city" value="busan" />부산
+      <input type="radio" name="city" value="chunchen" />춘천
+      <input type="button" value="체크확인" onclick="findChecked()" />
+    </form>
+    <script>
+      function findChecked() {
+        let found = null;
+        let kcity = document.getElementsByName("city");
+
+        kcity.forEach((item) => {
+          if (item.checked) found = item.value;
+        });
+
+        if (found != null) alert(found + "이 선택됨");
+        else alert("선택된 것이 없음");
+      }
+    </script>
+  </body>
+</html>
