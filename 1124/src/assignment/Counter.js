@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 function Counter() {
     let [value, setValue] = useState(0);
     function addBtnHandler(){
-        value++;
-        setValue(value);
+        
+        setValue(++value);
     }
     return (
         <div>

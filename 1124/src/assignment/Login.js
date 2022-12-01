@@ -11,7 +11,8 @@ function Login ()  {
     return (
         <div>
             <div>{value}</div>
-            <button onClick={loginHandler}>로그인</button> <button onClick={logoutHandler}>로그아웃</button>
+            <button onClick={loginHandler}>로그인</button>
+            <button onClick={logoutHandler}>로그아웃</button>
         </div>
     );
 };
